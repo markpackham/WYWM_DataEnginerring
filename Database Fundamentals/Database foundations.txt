@@ -1,0 +1,10 @@
+Database Foundations
+
+Database
+A database is an organised collection of data. 
+
+Database Hardware
+The physical machine that stores the data. This can be either an on-site server or virtually on the cloud.
+
+DBMS
+A Database Management System is software that manages the storage of data in the database & interfaces with users.
