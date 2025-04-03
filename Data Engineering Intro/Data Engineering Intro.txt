@@ -1,0 +1,58 @@
+What is Data Engineering?
+
+Generally speaking, in the field of data, there are three primary roles:
+
+Data Analyst/Scientist
+Data Engineer
+Database Administrator / DBA
+In practice, each of these roles has a considerable amount of overlap with each other, but they are roughly defined as follows:
+
+
+Data Analyst/Scientist
+It is a data analyst's job to convert data into actionable insights.
+
+For example, an analyst will: 
+Create dashboards
+Aggregate key metrics
+Visualize data 
+Analyse trends to make predictions
+This role will inevitably involve some level of data transformation and cleaning.
+
+
+Data Engineer
+
+Data engineering can be considered an extension of software engineering, with an explicit focus on data.
+A data engineer will first gather business requirements which they will then use to develop the architecture of data storage and data migration within an organisation.
+A data engineer maintains the integrity, efficiency, and quality of data as it migrates from the collection point, through staging, processing, through to the final point of use.
+Depending on the diversity of data and requirements, this could be as simple as maintaining a SQL server, though it could also involve a complex web of multiple data sources running through pipelines for processing and storage in numerous databases.
+
+
+Database Administrator / DBA
+
+A database administrator is responsible for maintaining an established database.
+They are responsible for creating and deleting accounts, managing permissions, security, and general administration.
+This role focuses on day-to-day operations and the cyber security side of database management.
+
+A database administrator is also responsible for:
+Software updates 
+Scheduling downtime   
+And in some cases, installation, management, and repair of physical hardware.
+
+
+There is a saying in Data Science, “crap in, crap out". 
+
+If your data is not valid or reliable, then your conclusions will also be invalid and unreliable. 
+
+Data Engineers make sure the Data Analysts and Data Scientists are working with reliable data and that any required cleaning steps are minimised.
+
+
+
+The decisions about how to structure the ingestion, processing, and storage of data are the job of the data engineer.
+In general, where a data scientist or analyst analyses data and looks for trends, a data engineer focuses on maintaining the stability, validity and reliability of the data and the data infrastructure.
+
+
+How far down the chain a data engineer's job ends depends on those who use the data within the organization. If you are engineering for a data scientist who knows a bit of SQL/Python, then a working SQL server with documentation on each variable might be sufficient. 
+
+If you are preparing a system for a less technical audience, you may need to build further down the line and produce data models in the endpoint analysis software (e.g. Power BI or Tableau). You may need to prepare aggregations and even visualizations or dashboards. However, even all of this depends on factors such as security constraints.
+
+NOTE: These roles are often advertised and filled by people who don’t work in data, meaning the definitions found in job postings are often vague and can lack specific detail on the work you will actually be doin
