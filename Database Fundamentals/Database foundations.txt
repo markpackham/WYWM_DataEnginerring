@@ -8,3 +8,49 @@ The physical machine that stores the data. This can be either an on-site server 
 
 DBMS
 A Database Management System is software that manages the storage of data in the database & interfaces with users.
+
+
+
+Types of Data in Relational Databases
+
+Relational Databases have strict rules that govern the allowable values that may be stored by each attribute (column). The data stored in an attribute must be of all the same type and same format. This is known as the Domain of the attribute, which is defined when the database is set up.
+
+Numbers
+–
+There are two main types of numbers that relational databases can store:
+
+Integers (Whole Numbers): 123
+Floating Point (Decimal Numbers): 3.1415
+In both cases, the numbers may also be positive or negative. Furthermore, there are subcategories of these two classes in most SQL languages, which govern the largest allowable values of these numbers.
+
+
+Numeric
+–
+Numeric data are number-like data with a formal structure. Some common sub-categories of numeric data include:
+
+Date: 1970-01-01 (YYYY-MM-DD is the standard format in SQL)
+Time: 10:30:55 (hh:mm:ss)
+Date-Time: 1970-01-01 08:30 (YYYY-MM-DD hh:mm:ss)
+
+
+Other examples include:
+
+Numeric Scale & Precision (for numbers with a FIXED decimal value): 3.50 (if storing a dollar amount to 2 decimal places)
+Boolean (a numerical TRUE/FALSE): 1 (True) or 0 (False)
+
+Character String (text)
+–
+Character string (text) includes not only words, but alphabetical, numerical, or punctuation characters.
+For the reason of memory allocation, the length of the text is usually needed to be specified. Examples of this might include:
+
+Text of a specified length: NSW (if the specified length was 3). Storing data in this way confers big data storage benefits (NVARCHAR(3)).
+Text with a variable length, but a maximum character limit: usernames that can be a maximum of 10 characters long (NVARCHAR(255)).
+General Text fields for storing whole paragraphs or essays. 
+Numbers in a character string field cannot be used for mathematical operations, as the system treats them in the same way as non-numbers.
+
+
+BLOB
+–
+BLOB is an acronym for Binary Large Object. Data stored in this format is stored as binary: a collection of ones and zeroes.
+
+These data types can be used to store unstructured data, though it is rather inefficient. The types of data that could be stored as BLOBs are therefore usually better off being stored in Non-Relational Databases.
