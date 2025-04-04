@@ -1,0 +1,77 @@
+Data Processing
+
+
+Batch Processing
+In batch processing, data is accumulated in a ‘batch’ before being processed.
+
+Think big blocks of data collected over time!
+
+
+Stream Processing
+During stream processing, data is processed as soon as it arrives in the database system.
+
+Think continuous real-time streaming, bit by bit!
+
+
+
+Batch Processing 
+
+Processing of data batches can be "ad-hoc" or scheduled. When scheduling batch processing, the interval can also be defined by time intervals or batch sizes. Hence, it can vary significantly based on the system. Processing a batch of data can therefore take minutes, hours, days or even weeks! 
+
+Batch processing is most appropriate for applications where the data is not immediately needed or does not require a rapid response time. For example, if we process sales data at the end of a day for analytical purposes.
+
+Batch processing is useful as it allows potentially large volumes of data to be processed by the database at a convenient time, such as off-peak times.
+
+Analytical databases are optimized for processing a small number of large data loads (batch processing), instead of processing a large number of small data loads.
+
+The disadvantage of batch processing is that you need to wait before the data is processed and becomes available in the system.
+
+An example of batch would be processing of payrolls, sales and bills.
+
+
+
+Stream Processing
+
+Stream processing, also known as real-time processing, is executed continuously. It works only when there is a change or update in the data stream, leaving all other data unchanged.
+
+This process is typically deployed together with both a:
+
+1 Data source connector: which takes care of changes from the data store, and writes them into the stream which is consumed by the data pipeline (located at the start of the data pipeline).
+
+2 Data sink connector: which extracts the processed messages from the stream and publishes them to the data store (located at the end of data pipeline).
+
+This is ideal for applications where an instant response is required. However, it usually entails a more complex data architecture compared to a batch processing solution.
+
+There are specific types of databases and services that are built to handle stream processing. For example, Azure's CosmosDB database and Azure Stream Analytics are Microsoft's recommended methods for handling real-time data processing.
+
+For example, these services are designed to be optimised to prevent fraud detection and conduct social media sentiment analysis.
+
+
+
+
+Micro-Batch Processing (Not very popular & declining)
+
+Micro-Batch processing or micro-batching is a combination of both Batching and Streaming. 
+
+It typically involves batching the data but scheduling it to be processed at very small time intervals.
+
+Micro-batching is comparatively less common than the other two processing options though it still finds use in some organizations as their database architectures may be set up for micro-batch processing. 
+
+With the increasing need for ‘data on demand’ micro-batching seems to be falling out of demand as streaming gains popularity.
+
+Micro-batching allows data to be processed when computing resources are available, and with little or no user interaction in particular when fresh data is needed.
+
+
+Data Extraction
+
+Whether data is processed via batch, stream, or micro-batch processing, it still requires a method of being transferred from the system where it is created, to where it is stored or analyzed. This method must not only be fast and reliable, but it must comply with strict security requirements to not let the data fall into the wrong hands. 
+
+Although there are manual methods of transferring data, for example, sending a .CSV file via email or text message, there are many problems associated with this type of data transfer. Aside from security being an obvious concern, the ability to scale up as the number of .CSV files increases or the size of .CSV files increases will eventually be a problem.
+
+The most common method of data transfer is via APIs (Application Programming Interface), which is a method for computers (including databases and servers) to communicate with each other. Many databases retrieve their data via APIs using "calls" to the application where data is stored.
+
+There is a variety of different APIs, for example:
+
+REST (Representational State Transfer) API
+SOAP (Simple Object Access Protocol) API
+These APIs usually include an authentication method that allows the system to ensure data is being transferred to the correct database. The specific authentication methods available and "API calls" will be covered later.

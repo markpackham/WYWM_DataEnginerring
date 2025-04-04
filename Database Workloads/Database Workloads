@@ -1,0 +1,42 @@
+Database Workloads
+
+
+Typically transactional queries usually involve:
+
+Writing, updating, or deleting a small amount of data. For example, updating a single cell in a table, or adding a new row of data to a table. 
+Simultaneous transactions. That is, multiple queries can be run simultaneously, provided they do not affect one another (e.g. they cannot use the same pieces of data).
+Fast query run-times (usually < 1 second).
+
+Transactional Integrity
+
+Database Management Systems (DBMSs) enforce strict criteria that govern data integrity whilst the database processes transactions. These criteria protect against events that may corrupt the data stored in the database, such as partially complete transactions, or transactions that violate certain conditions.
+
+In the context of the bank transfer example that was given above, consider what would happen if there was an interruption between the steps of this transaction. Imagine if the money was successfully deducted from Tom's account, but then the power to the database goes out. Jimmy's account would not receive the funds in the subsequent query, and the $100 could mysteriously disappear!
+
+Luckily, because of the criteria that govern data integrity, a partially complete transaction like this is not permitted. As a result, no changes would be committed to the database, and any changes made would be rolled back. This means that no money can go missing from Tom's account.
+
+
+
+Data Warehousing
+
+Analytical workloads are typically performed by an Analytical Database or a Data Warehouse. A Data Warehouse consolidates and stores data from multiple sources, which may include data copied from the organization's Transactional Database(s). These systems are typically read-only, meaning that normal users (non-administrators) cannot modify stored data, but they can retrieve a copy of it.
+
+Unlike Transactional Databases, Data Warehouses are designed to run 'heavy' analytical queries, which involve retrieving and processing large volumes of data and returning a very specific answer. Their queries usually involve analysing specific attributes (i.e. columns) of data with multiple conditions. 
+
+For example: In the context of sales, let's say we want to know the average age of clients in a selection of cities that purchased a given product within a given period. If we were dealing with a large dataset, this query might have a significant run time.
+
+Data Warehouses also usually have additional built-in analysis tools and/or improved compatibility with external analysis tools. 
+
+Column-Store Databases
+
+Analytical workloads are typically undertaken by Column-Store Databases, a type of non-relational database, which was detailed in the preceding lesson. The data model of these databases makes them highly efficient at retrieving columns of data. These types of databases can appear to be very similar to traditional relational databases regarding interaction, transformations, and analysis. However, one will experience a significant performance boost when conducting analysis compared to a traditional relational database structure.
+
+Examples of a column-store database include Apache Parquet and MariaDB. 
+
+Data can also be stored in a multi-dimensional format, referred to as Data Cubes. This format affords the database both improved speed and versatility when processing complex queries. However, this is less common now than 10 years ago due to the increased performance of relational-analytical databases.
+
+Populating Data Warehouses
+
+The data in Data Warehouses are generally not updated in real time, but instead updated according to a schedule. When loading data in, there are two options, a Full Load and an Incremental Load.
+
+Both Full Load and Incremental Load are a form of Batch Processing
