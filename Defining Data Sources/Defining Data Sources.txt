@@ -1,0 +1,13 @@
+Data Sources and Data Aggregation
+
+
+The way that Data professionals work on these two layers is through a data Extract Transform and Load (ETL) process. Creating these data Extract, Transform and Load (ETL) pipelines is typically the role of the Data Engineer.
+
+Extract
+Extracting the data from the source involves collecting and retrieving data from a variety of sources and collating it in a centralised location.
+
+Transform
+Transform the data involves taking the raw extracted data and preparing it for analysis. For example, a major (and somewhat notorious) component of the transform stage includes cleaning the data, to ensure consistent formatting, and removal of errors or blank fields.
+
+Load
+Once the data is cleaned and deemed suitable for analysis it is moved to a Data Warehouse or Database. From here, it can be directly accessed by those who want to conduct analysis, i.e. our Data Analysts. 
